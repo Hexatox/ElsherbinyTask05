@@ -1,0 +1,76 @@
+# ELSHERBINYTASK05
+
+*Empowering Seamless Innovation Through Unified Solutions*
+
+![last-commit](https://img.shields.io/github/last-commit/Hexatox/ElsherbinyTask05?style=flat&logo=git&logoColor=white&color=0080ff)
+![repo-top-language](https://img.shields.io/github/languages/top/Hexatox/ElsherbinyTask05?style=flat&color=0080ff)
+![repo-language-count](https://img.shields.io/github/languages/count/Hexatox/ElsherbinyTask05?style=flat&color=0080ff)
+
+**Built with the tools and technologies:**
+
+![JSON](https://img.shields.io/badge/JSON-000000.svg?style=flat&logo=JSON&logoColor=white)
+![ReadMe](https://img.shields.io/badge/ReadMe-018EF5.svg?style=flat&logo=ReadMe&logoColor=white)
+![NuGet](https://img.shields.io/badge/NuGet-004880.svg?style=flat&logo=NuGet&logoColor=white)
+
+---
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Usage](#usage)
+
+---
+
+## Overview
+
+**ElsherbinyTask05** is a comprehensive developer tool that streamlines the creation of secure, scalable web APIs using **.NET 9.0**. It offers built-in **JWT authentication**, **role-based authorization**, and seamless **data management** for books and users, all integrated with **PostgreSQL** via Entity Framework Core.
+
+### Why ElsherbinyTask05?
+
+This project simplifies secure API development with a well-structured architecture. The core features include:
+
+- **🛡️ Security & Authentication:** Implements JWT-based security and role management for protected endpoints.
+- **📚 CRUD for Books & Users:** Facilitates full data operations with clear models and repositories.
+- **⚙️ Configurable Environment:** Centralized settings for development, testing, and production workflows.
+- **🔗 Modular Architecture:** Separates concerns with dedicated models, controllers, and data access layers.
+- **🌐 Modern Tech Stack:** Built with .NET 9.0 and Entity Framework Core for scalable, maintainable solutions.
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+This project requires the following dependencies:
+
+- **Programming Language:** C#
+- **Package Manager:** NuGet
+
+### Installation
+
+Build `ElsherbinyTask05` from the source and install dependencies:
+
+1. **Clone the repository:**
+   ```bash
+    git clone https://github.com/Hexatox/ElsherbinyTask05
+   ```
+
+Navigate to the project directory:
+
+```bash
+cd ElsherbinyTask05
+```
+Install the dependencies:
+
+```
+dotnet restore
+```
+#### Usage
+Run the project with:
+
+```bash
+dotnet run
+```
