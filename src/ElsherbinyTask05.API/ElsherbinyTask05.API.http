@@ -1,0 +1,86 @@
+@HostAddress = http://localhost:5083
+@AdminAuth =Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6Imhhc2hzc2ltIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJuYW1lIjoiSGFzaGltIEtoYWxpZCIsIm5iZiI6MTc1MTIxMzM0MywiZXhwIjoxNzUxMjU2NTQzLCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo3MDUwIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzA1MCJ9.1ZvZQ146VYI-Op1uAKTodvonRx0wdbhWcrYuO_JcXZ4
+
+
+@EditorAuth =Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImhleGF0b3giLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJFZGl0b3IiLCJuYW1lIjoiQWRuYW5lIE1hbGtpIiwibmJmIjoxNzUxMjEzODE2LCJleHAiOjE3NTEyNTcwMTYsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjcwNTAiLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo3MDUwIn0.bTc3owYNliR2SgYHc5_2pDZcb37ArDk91V9J8z9rRSQ
+GET {{HostAddress}}/weatherforecast/
+Accept: application/json
+###
+
+POST {{HostAddress}}/api/books
+Authorization: {{EditorAuth}}
+Content-Type: application/json
+
+{
+  "title": "Editor Added This",
+  "author": "Herman Melville",
+  "publishedDate": "1851-10-18T00:00:00"
+}
+
+
+###
+GET {{HostAddress}}/api/books
+Authorization: {{AdminAuth}}
+
+###
+
+PUT {{HostAddress}}/api/books/0197bc64-e12f-7cac-a101-8fd80594dfa9
+
+{
+  "title": "The Great Gatsby V2",
+  "author": "F. Scott Fitzgerald & M.Adnane",
+  "publishedDate": "2025-04-10"
+}
+###
+DELETE /books/1
+
+
+###
+
+
+POST {{HostAddress}}/api/Auth/token
+Content-Type: application/json
+
+{
+  "username" :"hashssim" ,
+  "password" : "User!"
+}
+
+
+###
+
+
+POST {{HostAddress}}/api/Auth/token
+Content-Type: application/json
+
+{
+  "username" :"hexatox" ,
+  "password" : "WillBeAdmin!"
+}
+
+
+
+
+
+###
+
+
+POST {{HostAddress}}/api/Auth/signup
+Content-Type: application/json
+
+{
+  "username" :"hexatox" ,
+  "password" : "WillBeAdmin!",
+  "fullname" : "Adnane Malki"
+}
+
+
+###
+POST {{HostAddress}}/api/Auth/changerole
+Content-Type: application/json
+Authorization: {{AdminAuth}}
+
+{
+  "username" : "hexatox",
+  "newrole" : "Editor"
+}
